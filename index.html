@@ -35,13 +35,32 @@
     </div>
 
     <aside class="quote" id="cotacao">
-      <div class="qtitle"><div class="qicon">↗</div><div><h2>Calcule sua cotação</h2><p>Preencha os dados e receba uma estimativa.</p></div></div>
+      <div class="quote-head">
+        <div class="qicon">⌁</div>
+        <div><div class="quote-kicker">COTAÇÃO ONLINE</div><h2>Calcule seu frete</h2><p>Informe os dados da sua carga.</p></div>
+      </div>
+      <div class="quote-line"></div>
       <form id="quoteForm">
-        <label>Origem</label><div class="select"><select id="origin"><option>Uberaba - MG</option><option>Uberlândia - MG</option></select></div>
-        <label>Destino</label><div class="select"><select id="destination"><option value="">Selecione o destino</option><option>Uberlândia - MG</option><option>São Paulo - SP</option><option>Belo Horizonte - MG</option><option>Ribeirão Preto - SP</option></select></div>
-        <div class="cols"><div><label>Peso da carga</label><div class="input"><input id="weight" type="number" placeholder="Ex.: 100"><em>kg</em></div></div><div><label>Tipo de carga</label><div class="select"><select><option>Geral</option><option>Fracionada</option><option>Industrial</option></select></div></div></div>
-        <button>Calcular cotação <span>→</span></button><div id="result" class="result">Informe os dados para simular.</div>
+        <div class="field">
+          <label>Origem</label>
+          <div class="select"><select id="origin"><option>Uberaba - MG</option><option>Uberlândia - MG</option></select></div>
+        </div>
+        <div class="field">
+          <label>Destino</label>
+          <div class="select"><select id="destination"><option value="">Selecione o destino</option><option>Uberlândia - MG</option><option>São Paulo - SP</option><option>Belo Horizonte - MG</option><option>Ribeirão Preto - SP</option></select></div>
+        </div>
+        <div class="quote-grid">
+          <div class="field"><label>Peso da carga</label><div class="input"><input id="weight" type="number" min="0" placeholder="Ex.: 100"><em>kg</em></div></div>
+          <div class="field"><label>Valor da NF</label><div class="input"><input id="invoice" type="number" min="0" placeholder="Ex.: 5.000"><em>R$</em></div></div>
+        </div>
+        <div class="quote-grid">
+          <div class="field"><label>Volumes</label><div class="input"><input id="volumes" type="number" min="1" value="1" placeholder="1"><em>un.</em></div></div>
+          <div class="field"><label>Tipo de carga</label><div class="select"><select id="cargo"><option>Geral</option><option>Fracionada</option><option>Industrial</option></select></div></div>
+        </div>
+        <button class="quote-btn" type="submit"><span>Calcular estimativa</span><b>→</b></button>
+        <div id="result" class="result"><span>●</span> Preencha os dados para visualizar uma estimativa.</div>
       </form>
+      <div class="quote-note">Estimativa visual para demonstração do novo layout.</div>
     </aside>
   </div>
 
